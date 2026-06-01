@@ -1,4 +1,4 @@
-print("Loading file...")
+-- CREDITS TO STEVE
 local filename = arg[1]
 local func, err = loadfile(filename)
 if not func then
@@ -211,7 +211,7 @@ end
 end
 serialize(ks)
 append("</roblox>")
-local file = io.open("lua2rbxmx.rbxmx", "w")
+local output = arg[2] or "lua2rbxmx.rbxmx"
+local file = io.open(output, "w")
 file:write(table.concat(xml, ""))
 file:close()
-print("Convertion is successfully.")
